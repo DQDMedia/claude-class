@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — Your Name Photography</title>
+  <meta name="description" content="Get in touch with Your Name for bookings and inquiries." />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a href="index.html" class="brand">Your Name <span>Photography</span></a>
+    <button class="nav-toggle" aria-label="Toggle menu">&#9776;</button>
+    <nav>
+      <ul>
+        <li><a href="index.html">Work</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="contact-section">
+    <h2>Get in touch</h2>
+    <p>For bookings, prints, and general inquiries, use the form below.</p>
+
+    <form id="contact-form">
+      <div class="form-row">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required />
+      </div>
+      <div class="form-row">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required />
+      </div>
+      <div class="form-row">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" required></textarea>
+      </div>
+      <button type="submit" class="submit-btn">Send message</button>
+      <p class="form-note"></p>
+    </form>
+
+    <div class="direct-contact">
+      <p>Or reach me directly at <a href="mailto:hello@yourdomain.com">hello@yourdomain.com</a>.</p>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    &copy; 2026 Your Name. All rights reserved.
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
