@@ -126,3 +126,21 @@ if (contactForm) {
     note.classList.add("visible");
   });
 }
+
+// BOGO promo popup
+const promoOverlay = document.querySelector("#promo-overlay");
+const promoClose = document.querySelector("#promo-close");
+
+if (promoOverlay) {
+  window.addEventListener("load", () => promoOverlay.classList.add("open"));
+
+  promoClose.addEventListener("click", () => promoOverlay.classList.remove("open"));
+
+  promoOverlay.addEventListener("click", (e) => {
+    if (e.target === promoOverlay) promoOverlay.classList.remove("open");
+  });
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") promoOverlay.classList.remove("open");
+  });
+}

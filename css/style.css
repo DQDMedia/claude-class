@@ -19,7 +19,13 @@ html {
 }
 
 body {
-  background: var(--bg);
+  background-color: var(--bg);
+  background-image:
+    linear-gradient(45deg, rgba(255, 255, 255, 0.035) 25%, transparent 25%, transparent 75%, rgba(255, 255, 255, 0.035) 75%),
+    linear-gradient(45deg, rgba(255, 255, 255, 0.035) 25%, transparent 25%, transparent 75%, rgba(255, 255, 255, 0.035) 75%),
+    radial-gradient(ellipse 3px 6px at 50% 40%, rgba(255, 255, 255, 0.12), transparent 70%);
+  background-size: 32px 32px, 32px 32px, 32px 32px;
+  background-position: 0 0, 16px 16px, 0 0;
   color: var(--text);
   font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
   line-height: 1.5;
@@ -34,6 +40,7 @@ a {
 img {
   display: block;
   max-width: 100%;
+  border: 3px solid #ffffff;
 }
 
 /* Header */
@@ -52,7 +59,7 @@ img {
 }
 
 .brand {
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: Papyrus, "Comic Sans MS", Georgia, fantasy;
   font-size: 1.3rem;
   letter-spacing: 0.04em;
 }
@@ -120,7 +127,7 @@ nav a.active {
 }
 
 .hero h1 {
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: Papyrus, "Comic Sans MS", Georgia, fantasy;
   font-size: clamp(2rem, 5vw, 3.5rem);
   font-weight: 400;
   letter-spacing: 0.02em;
@@ -284,7 +291,7 @@ nav a.active {
 }
 
 .about-text h2 {
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: Papyrus, "Comic Sans MS", Georgia, fantasy;
   font-weight: 400;
   font-size: 2rem;
   margin-bottom: 1.25rem;
@@ -315,7 +322,7 @@ nav a.active {
 }
 
 .contact-section h2 {
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: Papyrus, "Comic Sans MS", Georgia, fantasy;
   font-weight: 400;
   font-size: 2rem;
   margin-bottom: 0.75rem;
@@ -449,4 +456,73 @@ nav a.active {
   .about-portrait {
     max-width: 220px;
   }
+}
+
+/* Promo popup */
+
+.promo-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 300;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.75);
+  padding: 1.5rem;
+}
+
+.promo-overlay.open {
+  display: flex;
+}
+
+.promo-popup {
+  position: relative;
+  width: 100%;
+  max-width: 380px;
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 2.5rem 2rem 2rem;
+  text-align: center;
+}
+
+.promo-eyebrow {
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 0.5rem;
+}
+
+.promo-popup h3 {
+  font-family: Papyrus, "Comic Sans MS", Georgia, fantasy;
+  font-size: 1.6rem;
+  font-weight: 400;
+  margin-bottom: 0.75rem;
+}
+
+.promo-popup p {
+  color: var(--text-dim);
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+}
+
+.promo-popup .submit-btn {
+  display: inline-block;
+}
+
+.promo-close {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.75rem;
+  background: none;
+  border: none;
+  color: var(--text);
+  font-size: 1.75rem;
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.promo-close:hover {
+  opacity: 1;
 }
